@@ -28,31 +28,41 @@ public class SpielBoard {
                 "Avatar 5 --> *\n"
         );
 
-        System.out.println("Wählen Sie ein Symbol als Avatar: ");
+        System.out.println("Wählen Sie ein Symbol als Avatar, oder geben Sie eine Zahl von 1-5 ein: ");
         boolean avatar = true;
-        String roboter ="";
+        String roboter = "";
 
         while (avatar) {
-             roboter = readIn.nextLine();
+            roboter = readIn.nextLine();
             switch (roboter) {
                 case "§":
+                case "1":
+                    roboter = "§";
                     System.out.println(username + " ,das ist dein Avatar: " + roboter);
                     avatar = false;
                     break;
                 case "$":
+                case "2":
+                    roboter = "$";
                     System.out.println(username + " ,das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "%":
+                case "3":
+                    roboter = "%";
                     System.out.println(username + " ,das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "&":
+                case "4":
+                    roboter = "&";
                     System.out.println(username + " ,das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "*":
-                    System.out.println(username + " ,das ist dein Avatar:" + roboter);
+                case "5":
+                    roboter = "*";
+                    System.out.println(username + " ,das ist dein Avatar: " + roboter);
                     avatar = false;
                     break;
                 default:
