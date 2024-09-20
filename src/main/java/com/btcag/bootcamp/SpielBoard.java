@@ -44,25 +44,25 @@ public class SpielBoard {
                 case "$":
                 case "2":
                     roboter = "$";
-                    System.out.println(username + " das ist dein Avatar:" + roboter);
+                    System.out.println(username + ", das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "%":
                 case "3":
                     roboter = "%";
-                    System.out.println(username + " das ist dein Avatar:" + roboter);
+                    System.out.println(username + ", das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "&":
                 case "4":
                     roboter = "&";
-                    System.out.println(username + " das ist dein Avatar:" + roboter);
+                    System.out.println(username + ", das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "*":
                 case "5":
                     roboter = "*";
-                    System.out.println(username + " das ist dein Avatar: " + roboter);
+                    System.out.println(username + ", das ist dein Avatar: " + roboter);
                     avatar = false;
                     break;
                 default:
