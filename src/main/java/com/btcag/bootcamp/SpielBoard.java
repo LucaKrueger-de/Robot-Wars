@@ -38,31 +38,31 @@ public class SpielBoard {
                 case "§":
                 case "1":
                     roboter = "§";
-                    System.out.println(username + " ,das ist dein Avatar: " + roboter);
+                    System.out.println(username + " das ist dein Avatar: " + roboter);
                     avatar = false;
                     break;
                 case "$":
                 case "2":
                     roboter = "$";
-                    System.out.println(username + " ,das ist dein Avatar:" + roboter);
+                    System.out.println(username + " das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "%":
                 case "3":
                     roboter = "%";
-                    System.out.println(username + " ,das ist dein Avatar:" + roboter);
+                    System.out.println(username + " das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "&":
                 case "4":
                     roboter = "&";
-                    System.out.println(username + " ,das ist dein Avatar:" + roboter);
+                    System.out.println(username + " das ist dein Avatar:" + roboter);
                     avatar = false;
                     break;
                 case "*":
                 case "5":
                     roboter = "*";
-                    System.out.println(username + " ,das ist dein Avatar: " + roboter);
+                    System.out.println(username + " das ist dein Avatar: " + roboter);
                     avatar = false;
                     break;
                 default:
@@ -80,10 +80,10 @@ public class SpielBoard {
         while (y < 10) {
             x = 0;
             while (x < 15) {
-                System.out.print("[ ]");
+                System.out.print("[  ]");
                 x = x + 1;
                 if (y == 6 && x == 7) {
-                    System.out.print("[" + roboter + "]");
+                    System.out.print("[ " + roboter + "]");
                     x++;
                 }
             }
