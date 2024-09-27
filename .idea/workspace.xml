@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c8063ba-79ea-4e4d-bf73-9c089e7c7555" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/btcag/bootcamp/SpielBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btcag/bootcamp/SpielBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
