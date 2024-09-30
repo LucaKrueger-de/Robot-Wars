@@ -1,9 +1,11 @@
 package com.btcag.bootcamp;
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class SpielBoard {
     public static Scanner readIn = new Scanner(System.in);
+    public static Random random = new Random();
+
 
     public static void main(String[] args) {
         intro();
@@ -12,7 +14,9 @@ public class SpielBoard {
         String enemy = enemyRobot();
         String roboter2 = enemyAvatar(enemy);
 
+
         drawFieldwithPlayer(roboter, username, roboter2, enemy);
+        turn(roboter, roboter2);
     }
 
 
@@ -28,11 +32,11 @@ public class SpielBoard {
             while (x < 15) {
                 System.out.print("[  ]");
                 x = x + 1;
-                if (y == 6 && x == 7) {
+                if (y == 6 && x == 14) {
                     System.out.print("[ " + roboter + "]");
                     x++;
                 }
-                if (y == 5 && x == 7) {
+                if (y == 6 && x == 1) {
                     System.out.print("[ " + enemy + "]");
                     x++;
                 }
@@ -195,11 +199,92 @@ public class SpielBoard {
     }
 //----------------------------------------------------Spielzug-------------------------------------------------------------
 
-    public static void turn(){
+    public static void turn(String roboter2, String roboter) {
+        System.out.println("\n\n\n");
 
 
+        int fieldWidth = 15;
+        int fieldHeight = 10;
+
+        int x1 = 0, y1 = 0;
+        int x2 = 14, y2 = 9;
+
+        while (true) {
+            for (int i = 0; i < fieldHeight; i++) {
+                for (int j = 0; j < fieldWidth; j++) {
+                    if (i == y1 && j == x1) {
+                        System.out.print("[ " + roboter + " ]");
+                    } else if (i == y2 && j == x2) {
+                        System.out.print("[ " + roboter2 + " ]");
+                    } else {
+                        System.out.print("[   ]");
+                    }
+                }
+                System.out.println();
+            }
+
+            System.out.println(roboter + ", wo willst du deinen Roboter hinbewegen?");
+            System.out.print("X-Koordinate (0-" + (fieldWidth - 1) + "): ");
+            int newX = readIn.nextInt();
+            System.out.print("Y-Koordinate (0-" + (fieldHeight - 1) + "): ");
+            int newY = readIn.nextInt();
+
+            if (newX >= 0 && newX < fieldWidth && newY >= 0 && newY < fieldHeight) {
+                x1 = newX;
+                y1 = newY;
+            } else {
+                System.out.println("Ungültige Koordinaten für " + roboter + ". Bitte versuche es erneut.");
+            }
+
+            System.out.println("\nNach dem Zug von " + roboter + ":");
+
+            for (int i = 0; i < fieldHeight; i++) {
+                for (int j = 0; j < fieldWidth; j++) {
+                    if (i == y1 && j == x1) {
+                        System.out.print("[ " + roboter + " ]");
+                    } else if (i == y2 && j == x2) {
+                        System.out.print("[ " + roboter2 + " ]");
+                    } else {
+                        System.out.print("[   ]");
+                    }
+                }
+                System.out.println();
+            }
+
+            System.out.println(roboter2 + ", wo willst du deinen Roboter hinbewegen?");
+            System.out.print("X-Koordinate (0-" + (fieldWidth - 1) + "): ");
+            int newX2 = readIn.nextInt();
+            System.out.print("Y-Koordinate (0-" + (fieldHeight - 1) + "): ");
+            int newY2 = readIn.nextInt();
+
+            if (newX2 >= 0 && newX2 < fieldWidth && newY2 >= 0 && newY2 < fieldHeight) {
+                x2 = newX2;
+                y2 = newY2;
+            } else {
+                System.out.println("Ungültige Koordinaten für " + roboter2 + ". Bitte versuche es erneut.");
+            }
+
+            System.out.println("\nNach dem Zug von " + roboter2 + ":");
+
+            System.out.println("\n\n\n");
+
+            if (x1 == x2 && y1 == y2) {
+                System.out.println("Beide Roboter haben sich getroffen!");
+                int winner = random.nextInt(2) + 1;
+                if (winner == 1) {
+                    System.out.println(roboter + " hat gewonnen!");
+                } else {
+                    System.out.println(roboter2 + " hat gewonnen!");
+                }
+                break;
+            }
+        }
     }
-
-
-
 }
+//----------------------------------------------------Win-------------------------------------------------------------
+
+
+
+
+
+
