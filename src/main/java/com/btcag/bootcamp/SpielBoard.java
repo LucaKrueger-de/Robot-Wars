@@ -8,6 +8,15 @@ public class SpielBoard {
     public static Random random = new Random();
     public static int fieldWidth = 15;
     public static int fieldHeight = 10;
+    //---------------------------------------------------String-Variables----------------------------------------------
+    public static String username = getName();
+    public static String roboter = avatar(username);
+    public static String enemy = enemyRobot();
+    public static String roboter2 = enemyAvatar(enemy);
+    //--------------------------------------------Colors------------------------------------------------------------------
+    public static final String red = "\u001B[31m";
+    public static final String blue = "\u001B[34m";
+    public static final String RESET = "\u001B[0m";
 
     //----------------------------------------------------Intro-------------------------------------------------------------
     public static void intro() {
@@ -168,18 +177,19 @@ public class SpielBoard {
         int x2 = 14, y2 = 9;
 
         while (true) {
+            System.out.println(red + username + ": " + roboter + RESET + "                                                                 " + blue + enemy + ": " + roboter2 + "\n" + RESET);
             System.out.print("    ");
             for (int c = 0; c < fieldWidth; c++) {
                 System.out.printf(" %2d  ", c);
             }
             System.out.println();
             for (int i = 0; i < fieldHeight; i++) {
-                System.out.printf(" %2d ",i);
+                System.out.printf(" %2d ", i);
                 for (int j = 0; j < fieldWidth; j++) {
                     if (i == y1 && j == x1) {
-                        System.out.print("[ " + roboter + " ]");
+                        System.out.print("[ "+red + roboter + RESET+" ]");
                     } else if (i == y2 && j == x2) {
-                        System.out.print("[ " + roboter2 + " ]");
+                        System.out.print("[ "+blue + roboter2 + RESET + " ]");
                     } else {
                         System.out.print("[   ]");
                     }
@@ -200,8 +210,9 @@ public class SpielBoard {
                 System.out.println("Ungültige Koordinaten für " + username + ". Bitte versuche es erneut.");
             }
 
-            System.out.println("\nNach dem Zug von " + username + ":");
+            System.out.println("\nNach dem Zug von " + username + "\n");
 
+            System.out.println(red + username + ": " + roboter + RESET + "                                                                 " + blue + enemy + ": " + roboter2 + "\n" + RESET);
             System.out.print("    ");
             for (int c = 0; c < fieldWidth; c++) {
                 System.out.printf(" %2d  ", c);
@@ -211,9 +222,9 @@ public class SpielBoard {
                 System.out.printf("%2d  ", i);
                 for (int j = 0; j < fieldWidth; j++) {
                     if (i == y1 && j == x1) {
-                        System.out.print("[ " + roboter + " ]");
+                        System.out.print("[ "+red + roboter + RESET+" ]");
                     } else if (i == y2 && j == x2) {
-                        System.out.print("[ " + roboter2 + " ]");
+                        System.out.print("[ "+blue + roboter2 + RESET + " ]");
                     } else {
                         System.out.print("[   ]");
                     }
@@ -240,7 +251,7 @@ public class SpielBoard {
 
             if (x1 == x2 && y1 == y2) {
                 System.out.println("Beide Roboter haben sich getroffen!");
-                int winner = random.nextInt(2) + 1;
+                int winner = random.nextInt(0, 2);
                 if (winner == 1) {
                     System.out.println(username + " hat gewonnen!");
                 } else {
@@ -253,12 +264,6 @@ public class SpielBoard {
 
     public static void main(String[] args) {
         intro();
-        String username = getName();
-        String roboter = avatar(username);
-        String enemy = enemyRobot();
-        String roboter2 = enemyAvatar(enemy);
-
-
         turn(username, enemy, roboter, roboter2);
     }
 }
