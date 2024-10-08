@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class SpielBoard {
     public static Scanner readIn = new Scanner(System.in);
     public static Random random = new Random();
+    public static int fieldWidth = 15;
+    public static int fieldHeight = 10;
 
     //----------------------------------------------------Intro-------------------------------------------------------------
     public static void intro() {
@@ -158,17 +160,21 @@ public class SpielBoard {
 
     //----------------------------------------------------Spielzug-------------------------------------------------------------
 
-    public static void turn(String username, String enemy,String roboter,String roboter2) {
+    public static void turn(String username, String enemy, String roboter, String roboter2) {
         System.out.println("\n\n\n");
 
-        int fieldWidth = 15;
-        int fieldHeight = 10;
 
         int x1 = 0, y1 = 0;
         int x2 = 14, y2 = 9;
 
         while (true) {
+            System.out.print("    ");
+            for (int c = 0; c < fieldWidth; c++) {
+                System.out.printf(" %2d  ", c);
+            }
+            System.out.println();
             for (int i = 0; i < fieldHeight; i++) {
+                System.out.printf(" %2d ",i);
                 for (int j = 0; j < fieldWidth; j++) {
                     if (i == y1 && j == x1) {
                         System.out.print("[ " + roboter + " ]");
@@ -196,7 +202,13 @@ public class SpielBoard {
 
             System.out.println("\nNach dem Zug von " + username + ":");
 
+            System.out.print("    ");
+            for (int c = 0; c < fieldWidth; c++) {
+                System.out.printf(" %2d  ", c);
+            }
+            System.out.println();
             for (int i = 0; i < fieldHeight; i++) {
+                System.out.printf("%2d  ", i);
                 for (int j = 0; j < fieldWidth; j++) {
                     if (i == y1 && j == x1) {
                         System.out.print("[ " + roboter + " ]");
@@ -208,6 +220,7 @@ public class SpielBoard {
                 }
                 System.out.println();
             }
+
             System.out.println(enemy + ", wo willst du deinen Roboter hinbewegen?");
             System.out.print("X-Koordinate (0-" + (fieldWidth - 1) + "): ");
             int newX2 = readIn.nextInt();
@@ -237,6 +250,7 @@ public class SpielBoard {
             }
         }
     }
+
     public static void main(String[] args) {
         intro();
         String username = getName();
@@ -245,7 +259,7 @@ public class SpielBoard {
         String roboter2 = enemyAvatar(enemy);
 
 
-        turn(username,enemy,roboter, roboter2);
+        turn(username, enemy, roboter, roboter2);
     }
 }
 
