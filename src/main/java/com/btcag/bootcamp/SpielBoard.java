@@ -99,8 +99,6 @@ public class SpielBoard {
     }
 
     //----------------------------------------------------Enemy-Symbol-------------------------------------------------------------
-
-
     public static String enemyAvatar(String enemy) {
         System.out.println();
 
@@ -157,35 +155,10 @@ public class SpielBoard {
         return roboter2;
     }
 
-    //----------------------------------------------------FieldWithPlayer-------------------------------------------------------------
-    public static void drawFieldwithPlayer(String roboter, String username, String enemy, String roboter2) {
-        System.out.println("Hier sehen Sie das Spielfeld mit Ihrem Avatar und ihrem Gegner: ");
-        System.out.println();
-        System.out.println(username + " " + roboter + "                                                 " + roboter2 + " " + enemy);
-        int x = 0;
-        int y = 0;
-        while (y < 10) {
-            x = 0;
-            while (x < 15) {
-                System.out.print("[   ]");
-                x = x + 1;
-                if (y == 6 && x == 14) {
-                    System.out.print("[ " + roboter + " ]");
-                    x++;
-                }
-                if (y == 6 && x == 1) {
-                    System.out.print("[ " + enemy + " ]");
-                    x++;
-                }
-            }
-            System.out.println();
-            y++;
-        }
-    }
 
     //----------------------------------------------------Spielzug-------------------------------------------------------------
 
-    public static void turn(String roboter2, String roboter) {
+    public static void turn(String username, String enemy,String roboter,String roboter2) {
         System.out.println("\n\n\n");
 
         int fieldWidth = 15;
@@ -208,7 +181,7 @@ public class SpielBoard {
                 System.out.println();
             }
 
-            System.out.println(roboter + ", wo willst du deinen Roboter hinbewegen?");
+            System.out.println(username + ", wo willst du deinen Roboter hinbewegen?");
             System.out.print("X-Koordinate (0-" + (fieldWidth - 1) + "): ");
             int newX = readIn.nextInt();
             System.out.print("Y-Koordinate (0-" + (fieldHeight - 1) + "): ");
@@ -218,10 +191,10 @@ public class SpielBoard {
                 x1 = newX;
                 y1 = newY;
             } else {
-                System.out.println("Ungültige Koordinaten für " + roboter + ". Bitte versuche es erneut.");
+                System.out.println("Ungültige Koordinaten für " + username + ". Bitte versuche es erneut.");
             }
 
-            System.out.println("\nNach dem Zug von " + roboter + ":");
+            System.out.println("\nNach dem Zug von " + username + ":");
 
             for (int i = 0; i < fieldHeight; i++) {
                 for (int j = 0; j < fieldWidth; j++) {
@@ -235,8 +208,7 @@ public class SpielBoard {
                 }
                 System.out.println();
             }
-
-            System.out.println(roboter2 + ", wo willst du deinen Roboter hinbewegen?");
+            System.out.println(enemy + ", wo willst du deinen Roboter hinbewegen?");
             System.out.print("X-Koordinate (0-" + (fieldWidth - 1) + "): ");
             int newX2 = readIn.nextInt();
             System.out.print("Y-Koordinate (0-" + (fieldHeight - 1) + "): ");
@@ -246,10 +218,10 @@ public class SpielBoard {
                 x2 = newX2;
                 y2 = newY2;
             } else {
-                System.out.println("Ungültige Koordinaten für " + roboter2 + ". Bitte versuche es erneut.");
+                System.out.println("Ungültige Koordinaten für " + enemy + ". Bitte versuche es erneut.");
             }
 
-            System.out.println("\nNach dem Zug von " + roboter2 + ":");
+            System.out.println("\nNach dem Zug von " + enemy + ":");
 
             System.out.println("\n\n\n");
 
@@ -257,16 +229,14 @@ public class SpielBoard {
                 System.out.println("Beide Roboter haben sich getroffen!");
                 int winner = random.nextInt(2) + 1;
                 if (winner == 1) {
-                    System.out.println(roboter + " hat gewonnen!");
+                    System.out.println(username + " hat gewonnen!");
                 } else {
-                    System.out.println(roboter2 + " hat gewonnen!");
+                    System.out.println(enemy + " hat gewonnen!");
                 }
                 break;
             }
         }
     }
-
-
     public static void main(String[] args) {
         intro();
         String username = getName();
@@ -275,8 +245,7 @@ public class SpielBoard {
         String roboter2 = enemyAvatar(enemy);
 
 
-        drawFieldwithPlayer(roboter, username, roboter2, enemy);
-        turn(roboter, roboter2);
+        turn(username,enemy,roboter, roboter2);
     }
 }
 
