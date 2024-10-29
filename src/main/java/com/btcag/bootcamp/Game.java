@@ -5,8 +5,8 @@ public class Game {
     public static void main(String[] args) {
 
         Player p1 = new Player();
-        Player p2 = new Player();
         Robot r1 = new Robot();
+        Player p2 = new Player();
         Robot r2 = new Robot();
 
         System.out.println

@@ -8,6 +8,7 @@ public class Player {
     public Player() {
         getName();
     }
+
     public void getName() {
         Scanner readIn = new Scanner(System.in);
         String username;
@@ -17,7 +18,10 @@ public class Player {
         } while (username.length() < 3 || username.length() > 15);
         this.username = username;
     }
-
+    public String getUsername() {
+        return username;
+    }
 
 }
+
 
