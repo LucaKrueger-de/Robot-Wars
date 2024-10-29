@@ -16,20 +16,28 @@ public class SpielBoard {
     //--------------------------------------------Colors------------------------------------------------------------------
     public static final String red = "\u001B[31m";
     public static final String blue = "\u001B[34m";
+    public static final String yellow = "\u001B[93m";
+    public static final String green = "\u001B[32m";
+    public static final String purple = "\u001B[35m";
     public static final String RESET = "\u001B[0m";
+    public static String[] colors = {red, blue, yellow, green, purple};
 
     //----------------------------------------------------Intro-------------------------------------------------------------
     public static void intro() {
 
         System.out.println();
-        System.out.println("  _____   ____  ____   ____ _______  __          __     _____   _____ \n" +
+        String text =("  _____   ____  ____   ____ _______  __          __     _____   _____ \n" +
                 " |  __ \\ / __ \\|  _ \\ / __ \\__   __| \\ \\        / /\\   |  __ \\ / ____|\n" +
                 " | |__) | |  | | |_) | |  | | | |     \\ \\  /\\  / /  \\  | |__) | (___  \n" +
                 " |  _  /| |  | |  _ <| |  | | | |      \\ \\/  \\/ / /\\ \\ |  _  / \\___ \\ \n" +
                 " | | \\ \\| |__| | |_) | |__| | | |       \\  /\\  / ____ \\| | \\ \\ ____) |\n" +
                 " |_|  \\_\\\\____/|____/ \\____/  |_|        \\/  \\/_/    \\_\\_|  \\_\\_____/ \n" +
                 "                                                                     ");
-        System.out.println();
+
+    for (int i = 0; i < text.length(); i++) {
+        System.out.print(colors[i % colors.length] + text.charAt(i) + RESET);
+    }
+
         System.out.println("MACH DICH BEREIT ZU KÄMPFEN");
         System.out.println();
     }
@@ -187,11 +195,11 @@ public class SpielBoard {
                 System.out.printf(" %2d ", i);
                 for (int j = 0; j < fieldWidth; j++) {
                     if (i == y1 && j == x1) {
-                        System.out.print("[ "+red + roboter + RESET+" ]");
+                        System.out.print("[" + red + roboter + RESET + "]");
                     } else if (i == y2 && j == x2) {
-                        System.out.print("[ "+blue + roboter2 + RESET + " ]");
+                        System.out.print("[" + blue + roboter2 + RESET + "]");
                     } else {
-                        System.out.print("[   ]");
+                        System.out.print("[ ]");
                     }
                 }
                 System.out.println();
@@ -222,11 +230,11 @@ public class SpielBoard {
                 System.out.printf("%2d  ", i);
                 for (int j = 0; j < fieldWidth; j++) {
                     if (i == y1 && j == x1) {
-                        System.out.print("[ "+red + roboter + RESET+" ]");
+                        System.out.print("[" + red + roboter + RESET + "]");
                     } else if (i == y2 && j == x2) {
-                        System.out.print("[ "+blue + roboter2 + RESET + " ]");
+                        System.out.print("[" + blue + roboter2 + RESET + "]");
                     } else {
-                        System.out.print("[   ]");
+                        System.out.print("[ ]");
                     }
                 }
                 System.out.println();
