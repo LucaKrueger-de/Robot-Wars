@@ -1,9 +1,9 @@
-package com.btcag.bootcamp;
+package com.btcag.bootcamp.OldVersions;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class SpielBoard {
+public class OldVersion {
     public static Scanner readIn = new Scanner(System.in);
     public static Random random = new Random();
     public static int fieldWidth = 15;

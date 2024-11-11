@@ -1,29 +1,25 @@
-package com.btcag.bootcamp;
+package com.btcag.bootcamp.OldVersions;
 
 
 import java.util.Scanner;
 
 public class Robot {
     int HP = 1;
-    int energy = 1;
-    int shield = 1;
     int damage = 1;
     int range = 1;
-    int damageZone = 1;
-    int accuracy = 1;
     int movement = 1;
     String userAvatar;
     int SkillPoints;
 
-    public Robot() {
-        avatar();
-        skillPoints();
+
+    public Robot(Player player) {
+        this.avatar(player);
+        this.skillPoints(player);
     }
 
-    public void avatar() {
+    public void avatar(Player player) {
         System.out.println("===============AVATAR============");
-        System.out.println(" Wählen Sie ein Symbol als Avatar");
-        System.out.println(" oder geben Sie eine Zahl von 1-5 ein:");
+        System.out.println(" Wählen Sie ein Symbol als Avatar für " + player.username);
         System.out.println("=================================");
         System.out.println("1 - §");
         System.out.println("2 - $");
@@ -74,46 +70,30 @@ public class Robot {
     }
 
 
-    public void skillPoints() {
+    public void skillPoints(Player player) {
         Scanner readIn = new Scanner(System.in);
-        System.out.println("Verteilen Sie ihre Skillpunkte: ");
-        int points = 10;
+        System.out.println("Verteilen Sie ihre Skillpunkte: (1),(2),(3),(4) " + player.username + ": ");
+        playerStats();
+        int points = 3;
         String skillPoints = "";
         System.out.println();
         while (points > 0) {
-            playerStats();
             System.out.println("Punkte zur Verfügung: " + points);
             skillPoints = readIn.nextLine();
             switch (skillPoints) {
-                case "hp":
+                case "1":
                     this.HP++;
                     points--;
                     break;
-                case "energy":
-                    this.energy++;
-                    points--;
-                    break;
-                case "shield":
-                    this.shield++;
-                    points--;
-                    break;
-                case "damage":
+                case "2":
                     this.damage++;
                     points--;
                     break;
-                case "range":
+                case "3":
                     this.range++;
                     points--;
                     break;
-                case "damageZone":
-                    this.damageZone++;
-                    points--;
-                    break;
-                case "accuracy":
-                    this.accuracy++;
-                    points--;
-                    break;
-                case "movement":
+                case "4":
                     this.movement++;
                     points--;
                     break;
@@ -123,20 +103,16 @@ public class Robot {
             }
         }
         this.SkillPoints = points;
-
     }
 
     public void playerStats() {
-        System.out.println("===========PLAYER STATS=============");
-        System.out.printf("| %-12s : %2d |\n", "HealthPoints", HP);
-        System.out.printf("| %-12s : %2d |\n", "Energy", energy);
-        System.out.printf("| %-12s : %2d |\n", "Shield", shield);
-        System.out.printf("| %-12s : %2d |\n", "Damage", damage);
-        System.out.printf("| %-12s : %2d |\n", "Range", range);
-        System.out.printf("| %-12s : %2d |\n", "Damage Zone", damageZone);
-        System.out.printf("| %-12s : %2d |\n", "Accuracy", accuracy);
-        System.out.printf("| %-12s : %2d |\n", "Movement", movement);
-        System.out.println("====================================");
+        System.out.println("1 HealthPoints: " + this.HP + " || " + this.HP);
+        System.out.println("2 DamagePoints: " + this.damage + " || " + this.damage);
+        System.out.println("3 Range:        " + this.range + " || " + this.range);
+        System.out.println("4 Movement:     " + this.movement + " || " + this.movement);
+
+
     }
 }
+
 
