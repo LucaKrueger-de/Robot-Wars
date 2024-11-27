@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.OldVersions;
+package OldVersions;
 
 
 public class Game {

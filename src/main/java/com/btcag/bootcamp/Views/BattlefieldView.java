@@ -4,7 +4,9 @@ import com.btcag.bootcamp.Models.Battlefield;
 import com.btcag.bootcamp.Models.Robot;
 
 public class BattlefieldView {
-    public static void display(Battlefield battlefield) {
+    public static void display(Battlefield battlefield,String username,char userAvatar) {
+        System.out.println();
+        System.out.println("/"+username +" Ihr Avatar: "+userAvatar+"\\");
         printHeaderRow(battlefield.getWidth());
         for (char[] row : battlefield.getMap()) {
             printRow(row,"║", "║");

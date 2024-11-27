@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.OldVersions;
+package OldVersions;
 
 public enum Color {
     RED("\u001b[31;1m1"),

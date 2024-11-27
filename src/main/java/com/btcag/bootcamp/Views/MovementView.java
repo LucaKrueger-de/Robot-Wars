@@ -1,11 +1,13 @@
 package com.btcag.bootcamp.Views;
 
 import com.btcag.bootcamp.Services.MoveDirection;
-import java.util.Scanner;
-public class MovementView {
-    public static MoveDirection display() {
 
-        System.out.println("Bitte gib die Richtung an, in die sich der Roboter bewegen soll.");
+import java.util.Scanner;
+
+public class MovementView {
+    public static MoveDirection display(String username) {
+
+        System.out.println(username + " Bitte gib die Richtung an, in die sich der Roboter bewegen soll.");
         System.out.println("[N]orden, [S]üden, [O]sten, [W]esten");
         Scanner readIn = new Scanner(System.in);
 
@@ -18,7 +20,6 @@ public class MovementView {
 
         return direction;
     }
-
 
 
 }

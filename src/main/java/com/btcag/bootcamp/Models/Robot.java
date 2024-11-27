@@ -5,10 +5,10 @@ public class Robot {
     private int x;
     private int y;
     private final String symbol;
-    int range = 1;
-    int damage = 1;
-    int movementRate = 1;
-    int hp = 1;
+    private int range;
+    private int damage;
+    private int movementRate;
+    private int hp;
 
     public Robot(String name, int x, int y, char symbol) {
         this.name = name;
@@ -20,6 +20,11 @@ public class Robot {
         this.movementRate = 1;
         this.hp = 1;
     }
+
+    public int gettingDamage(int damage) {
+        return hp -= damage;
+    }
+
 
     public int getHp() {
         return hp;

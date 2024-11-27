@@ -1,25 +1,24 @@
 package com.btcag.bootcamp.Services;
 
 import java.util.Random;
+
 import com.btcag.bootcamp.Models.Robot;
 
 public class RobotService {
 
-    public static boolean CheckCollision(Robot robot1, Robot robot2) {
-        return(robot1.getX() == robot2.getX() && robot1.getY() == robot2.getY());
+    public static Robot CheckHP(Robot robot1, Robot robot2) {
+        if (robot1.getHp() <=0 && robot2.getHp() > 0) {
+            return robot2;
+        } else if (robot2.getHp() <= 0 && robot1.getHp() > 0) {
+            return robot1;
+        } else if (robot1.getHp() <= 0 && robot2.getHp() <= 0) {
+            return null;
+        } else {
+            return null;
+        }
     }
-
-
-    public static Robot getWinner(Robot robot1, Robot robot2) {
-        Random rand = new Random();
-        return(rand.nextBoolean())? robot1:robot2;
-    }
-
-
-
-
-
 }
+
 
 
 
