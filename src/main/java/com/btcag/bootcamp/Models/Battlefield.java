@@ -1,5 +1,7 @@
 package com.btcag.bootcamp.Models;
 import java.util.Arrays;
+import java.util.Random;
+
 public class Battlefield {
     private final int width;
     private final int height;
@@ -11,6 +13,7 @@ public class Battlefield {
         this.width = width;
         this.height = height;
         this.initializeMap();
+        this.placeItems(4);
 
     }
 
@@ -38,6 +41,26 @@ public class Battlefield {
     public boolean isValidField(int x, int y) {
         return x > 0 && x <= width && y > 0 && y <= height;
     }
+
+    private void placeObstacles(int obstacleNumber){
+
+    }
+    private void placeItems(int itemNumber){
+        Random random = new Random();
+        int itemsPlaced = 0;
+        while (itemsPlaced < itemNumber) {
+            int x = random.nextInt(width);
+            int y = random.nextInt(height);
+            if (map[y-1][x-1] == ' ') {
+                map[y-1][x-1] = '֎';
+                itemsPlaced++;
+            }
+        }
+
+    }
+
+
+
 }
 
 

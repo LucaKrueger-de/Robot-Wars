@@ -29,6 +29,7 @@ public class GameController {
 
         Battlefield battlefield = new Battlefield(15, 10);
 
+
         battlefield.setField(robot.getX(), robot.getY(), robotAvatar);
         battlefield.setField(enemy.getX(), enemy.getY(), robotAvatar2);
 
@@ -85,7 +86,6 @@ public class GameController {
                 || (robot.getX() - robot.getRange() <= enemy.getX() && enemy.getX() <= robot.getX()) && (robot.getY() - robot.getRange() <= enemy.getY() && enemy.getY() <= robot.getY());
     }
 
-
     private static void moveRobot(Robot robot, char robotAvatar, Battlefield battlefield, String username) {
         int newX = robot.getX();
         int newY = robot.getY();
@@ -104,7 +104,7 @@ public class GameController {
                 robot.setPosition(newX, newY);
                 battlefield.setField(robot.getX(), robot.getY(), robotAvatar);
                 BattlefieldView.display(battlefield,username,robotAvatar);
-                System.out.println("Moving " + username + " to " + tempX + " " + tempY);
+                System.out.println("Bewege " + username + " nach "+"X: " + tempX + "Y: " + tempY);
                 System.out.println("Verbleibende Laufzüge: " + remainingMovementPoints);
 
             } else {
