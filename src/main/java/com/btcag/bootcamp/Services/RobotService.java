@@ -2,6 +2,7 @@ package com.btcag.bootcamp.Services;
 
 import java.util.Random;
 
+import com.btcag.bootcamp.Models.Items;
 import com.btcag.bootcamp.Models.Robot;
 
 public class RobotService {
@@ -17,6 +18,18 @@ public class RobotService {
             return null;
         }
     }
+
+    public static boolean inRange(Robot robot, Robot enemy) {
+        return (robot.getX() + robot.getRange() >= enemy.getX() && enemy.getX() >= robot.getX()) && (robot.getY() + robot.getRange() >= enemy.getY() && enemy.getY() >= robot.getY())
+                || (robot.getX() + robot.getRange() >= enemy.getX() && enemy.getX() >= robot.getX()) && (robot.getY() - robot.getRange() <= enemy.getY() && enemy.getY() <= robot.getY())
+                || (robot.getX() - robot.getRange() <= enemy.getX() && enemy.getX() <= robot.getX()) && (robot.getY() + robot.getRange() >= enemy.getY() && enemy.getY() >= robot.getY())
+                || (robot.getX() - robot.getRange() <= enemy.getX() && enemy.getX() <= robot.getX()) && (robot.getY() - robot.getRange() <= enemy.getY() && enemy.getY() <= robot.getY());
+    }
+
+    public static boolean checkPlayerOnItem(Robot robot, Items item ) {
+        return (robot.getX()==item.getX() && robot.getY()==item.getY());
+    }
+
 }
 
 
