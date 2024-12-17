@@ -41,6 +41,10 @@ public class Items {
         return period;
     }
 
+    public void setPeriod(int period) {
+        this.period = period;
+    }
+
     public char getSymbol() {
         return symbol;
     }
@@ -49,5 +53,9 @@ public class Items {
         this.symbol = symbol;
     }
 
+    public void setPosition(int x,int y){
+        this.x = x;
+        this.y = y;
+    }
 
 }
