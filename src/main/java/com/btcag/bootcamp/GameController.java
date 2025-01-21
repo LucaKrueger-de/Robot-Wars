@@ -12,7 +12,7 @@ import com.btcag.bootcamp.Views.*;
 import java.util.Random;
 
 public class GameController {
-    public static Obstacles[] obstacles = new Obstacles[15];
+    public static Obstacles[] obstacles = new Obstacles[5];
     public static Random rand = new Random();
 
     public static void main(String[] args) {
