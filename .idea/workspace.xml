@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1a9e166-1c0c-4a52-8a17-b4c1a903c2cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btcag/bootcamp/HTTPRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btcag/bootcamp/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btcag/bootcamp/GameController.java" afterDir="false" />
-    </list>
+    <list default="true" id="d1a9e166-1c0c-4a52-8a17-b4c1a903c2cc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +223,7 @@
       <workItem from="1736972740445" duration="336000" />
       <workItem from="1737372979653" duration="2346000" />
       <workItem from="1737444856839" duration="3465000" />
-      <workItem from="1737461262540" duration="8194000" />
+      <workItem from="1737461262540" duration="8510000" />
     </task>
     <servers />
   </component>
