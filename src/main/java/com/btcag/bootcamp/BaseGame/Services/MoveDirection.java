@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.Services;
+package com.btcag.bootcamp.BaseGame.Services;
 
 public enum MoveDirection {
     NORD(0, -1),

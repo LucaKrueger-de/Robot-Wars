@@ -1,7 +1,7 @@
-package com.btcag.bootcamp.Models;
+package com.btcag.bootcamp.BaseGame.Models;
 
 public class Robot {
-    private final String name;
+    private String name;
     private int x;
     private int y;
     private final String symbol;
@@ -70,6 +70,11 @@ public class Robot {
 
     public String getName() {
         return name;
+    }
+
+
+    public void setName(){
+        this.name = name;
     }
 
     public void setPosition(int x, int y) {

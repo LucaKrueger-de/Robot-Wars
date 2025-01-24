@@ -1,7 +1,6 @@
-package com.btcag.bootcamp.Views;
+package com.btcag.bootcamp.BaseGame.Views;
 
-import com.btcag.bootcamp.Models.Battlefield;
-import com.btcag.bootcamp.Models.Robot;
+import com.btcag.bootcamp.BaseGame.Models.Battlefield;
 
 public class BattlefieldView {
     public static void display(Battlefield battlefield,String username,char userAvatar) {

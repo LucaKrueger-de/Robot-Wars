@@ -1,6 +1,6 @@
-package com.btcag.bootcamp.Views;
+package com.btcag.bootcamp.BaseGame.Views;
 
-import com.btcag.bootcamp.Services.MoveDirection;
+import com.btcag.bootcamp.BaseGame.Services.MoveDirection;
 
 import java.util.Scanner;
 

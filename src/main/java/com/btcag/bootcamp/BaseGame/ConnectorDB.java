@@ -1,4 +1,4 @@
-package com.btcag.bootcamp;
+package com.btcag.bootcamp.BaseGame;
 
 import java.sql.*;
 import java.sql.ResultSet;

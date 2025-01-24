@@ -1,7 +1,6 @@
-package com.btcag.bootcamp.Views;
+package com.btcag.bootcamp.BaseGame.Views;
 
-import com.btcag.bootcamp.Models.Items;
-import com.btcag.bootcamp.Models.Robot;
+import com.btcag.bootcamp.BaseGame.Models.Items;
 
 public class ItemView {
     public  static void effectView(Items item){

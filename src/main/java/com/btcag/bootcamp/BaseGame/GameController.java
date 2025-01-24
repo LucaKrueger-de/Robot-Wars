@@ -1,13 +1,13 @@
-package com.btcag.bootcamp;
+package com.btcag.bootcamp.BaseGame;
 
 
-import com.btcag.bootcamp.Models.Battlefield;
-import com.btcag.bootcamp.Models.Items;
-import com.btcag.bootcamp.Models.Obstacles;
-import com.btcag.bootcamp.Models.Robot;
-import com.btcag.bootcamp.Services.MoveDirection;
-import com.btcag.bootcamp.Services.RobotService;
-import com.btcag.bootcamp.Views.*;
+import com.btcag.bootcamp.BaseGame.Models.Battlefield;
+import com.btcag.bootcamp.BaseGame.Models.Items;
+import com.btcag.bootcamp.BaseGame.Models.Obstacles;
+import com.btcag.bootcamp.BaseGame.Models.Robot;
+import com.btcag.bootcamp.BaseGame.Services.MoveDirection;
+import com.btcag.bootcamp.BaseGame.Services.RobotService;
+import com.btcag.bootcamp.BaseGame.Views.*;
 
 import java.util.Random;
 

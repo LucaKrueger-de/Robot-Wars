@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.Models;
+package com.btcag.bootcamp.BaseGame.Models;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.Views;
+package com.btcag.bootcamp.BaseGame.Views;
 
 public class IntroScreenView {
  public static void display(){

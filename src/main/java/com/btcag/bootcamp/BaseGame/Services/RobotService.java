@@ -1,9 +1,7 @@
-package com.btcag.bootcamp.Services;
+package com.btcag.bootcamp.BaseGame.Services;
 
-import java.util.Random;
-
-import com.btcag.bootcamp.Models.Items;
-import com.btcag.bootcamp.Models.Robot;
+import com.btcag.bootcamp.BaseGame.Models.Items;
+import com.btcag.bootcamp.BaseGame.Models.Robot;
 
 public class RobotService {
 

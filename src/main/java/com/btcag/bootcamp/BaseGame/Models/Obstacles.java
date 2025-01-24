@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.Models;
+package com.btcag.bootcamp.BaseGame.Models;
 
 public class Obstacles {
     int x;

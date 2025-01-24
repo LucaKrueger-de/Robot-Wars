@@ -1,6 +1,6 @@
-package com.btcag.bootcamp.Views;
+package com.btcag.bootcamp.BaseGame.Views;
 
-import com.btcag.bootcamp.Models.Robot;
+import com.btcag.bootcamp.BaseGame.Models.Robot;
 
 public class RobotView {
     public static void display(Robot robot) {

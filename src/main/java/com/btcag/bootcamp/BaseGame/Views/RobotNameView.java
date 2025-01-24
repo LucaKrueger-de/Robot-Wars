@@ -1,4 +1,4 @@
-package com.btcag.bootcamp.Views;
+package com.btcag.bootcamp.BaseGame.Views;
 
 import java.util.Scanner;
 
