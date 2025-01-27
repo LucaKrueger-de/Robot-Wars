@@ -16,7 +16,6 @@ public class BotSkillPoints {
             System.out.println("(2) -> Damagepoints ");
             System.out.println("(3) -> Movementrange ");
             System.out.println("(4) -> Range \n");
-//test2
 
             Scanner readIn = new Scanner(System.in);
 

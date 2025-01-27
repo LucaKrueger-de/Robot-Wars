@@ -4,7 +4,7 @@ import com.btcag.bootcamp.APIconnectedGame.Models.Bot;
 import com.btcag.bootcamp.APIconnectedGame.Views.BotSkillPoints;
 import com.btcag.bootcamp.BaseGame.Views.RobotNameView;
 import org.json.JSONObject;
-  
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -88,8 +88,7 @@ public class PostRequest {
     public static void joinGame() throws IOException {
         System.out.println("Enter Game ID: ");
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter your robot ID: ");
-        Scanner robotId = new Scanner(System.in);
+        String robotId = "9d843244-d3dd-4c19-a5b2-04aaac5f0f2f";
         String gameId = reader.nextLine();
         URL url = new URL(baseURL + postGameURL + gameId + "/join");
 

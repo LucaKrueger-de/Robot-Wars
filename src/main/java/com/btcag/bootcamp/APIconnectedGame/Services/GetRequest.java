@@ -14,6 +14,7 @@ public class GetRequest {
     protected static String getGameURL = "api/games";
     private static String mapId = "dab4e423-20b4-4ca5-b5e0-4fe960277ea0";
 
+
     public static void getAllBots() throws IOException {
         URL url = new URL(baseURL + getRobotURL);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
